@@ -5,5 +5,7 @@ import React, { Component } from 'react';
 
 import App from './components/App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const rootEl = document.getElementById('root');
+
+ReactDOM.render(<App />, rootEl);
 
