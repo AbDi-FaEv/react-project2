@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Card from "./Card";
+import TaskCard from "./TaskCard";
 
 class List extends Component {
     constructor(props) {
@@ -8,7 +8,7 @@ class List extends Component {
 
     render() {
         let cards = this.props.cards.map( (card) => (
-            <Card key={card.id}
+            <TaskCard key={card.id}
                   id={card.id}
                   title={card.title}
                   description={card.description}
@@ -18,7 +18,10 @@ class List extends Component {
 
         return (
             <div>
-                { cards }
+                <h1>{this.props.title}</h1>
+                <div className="card-wrapper">
+                    { cards }
+                </div>
             </div>
         );
     }
